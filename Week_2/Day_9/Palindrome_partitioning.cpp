@@ -30,7 +30,7 @@ public:
         vector<vector<string>>ans;
         vector<string>res;
         funct(0, s, res, ans);
-        return ans;
+        return ans;co
         
     }
 };
