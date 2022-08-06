@@ -1,18 +1,16 @@
 #include<bits/stdc++.h>
 
 using namespace std;
-// A structure to represent a job 
 struct Job {
-   int id; // Job Id 
-   int dead; // Deadline of job 
-   int profit; // Profit if job is over before or on deadline 
+   int id; 
+   int dead; 
+   int profit; 
 };
 class Solution {
    public:
       bool static comparison(Job a, Job b) {
          return (a.profit > b.profit);
       }
-   //Function to find the maximum profit and the number of jobs done
    pair < int, int > JobScheduling(Job arr[], int n) {
 
       sort(arr, arr + n, comparison);
@@ -47,7 +45,6 @@ int main() {
    Job arr[n] = {{1,4,20},{2,1,10},{3,2,40},{4,2,30}};
 
    Solution ob;
-   //function call
    pair < int, int > ans = ob.JobScheduling(arr, n);
    cout << ans.first << " " << ans.second << endl;
 
